@@ -10,6 +10,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
 import styles from './styles';
 import { Answer } from '../../types/answers';
+import CloseIcon from '@material-ui/icons/Close';
 
 interface Props {
     questionId: number,
@@ -50,7 +51,7 @@ const QuestionDialog: FC<Props> = (props: Props) => {
                 <AppBar className={classes.appBar}>
                     <Toolbar>
                         <IconButton edge="start" color="inherit" onClick={props.closeDialog} aria-label="close">
-                            {/* <CloseIcon /> */}
+                            <CloseIcon />
                         </IconButton>
                         <Typography variant="h6" className={classes.title}>
                             Respostas
@@ -73,11 +74,11 @@ const QuestionDialog: FC<Props> = (props: Props) => {
                     </List>
 
                 </DialogContent>
-                <DialogActions className={classes.dialog}>
+                {/* <DialogActions className={classes.dialog}>
                     <Button onClick={props.closeDialog} color="primary">
                         Fechar
                 </Button>
-                </DialogActions>
+                </DialogActions> */}
             </Dialog>
         </>
     );

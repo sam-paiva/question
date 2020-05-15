@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { LoginViewModel } from '../types/user';
 
 const URL_BASE = process.env.REACT_APP_URL_API;
 const URL_HOMO = 'http://localhost:3333'
@@ -13,4 +14,9 @@ export async function getAnswersByQuestionId(id: number) {
             id: id
         }
     })
+}
+
+
+export async function login(login: LoginViewModel) {
+    return await axios.post(URL_BASE + '/sessions' || URL_HOMO + '/sessions', login)
 }

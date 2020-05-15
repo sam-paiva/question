@@ -10,6 +10,6 @@ function* getAnswersByQuestionId(action: any) {
     }
 }
 
-export function* watchAllQuestionTypes() {
+export function* watchAllAnswers() {
     yield takeEvery(actions.GET_ANSWERS_BY_QUESTION_ID_SAGA, getAnswersByQuestionId);
 }

@@ -3,12 +3,14 @@ import createSagaMiddleware from 'redux-saga';
 import rootSaga from '../saga/rootSaga';
 import questionsReducer from './reducers/questionsReducer';
 import answerReducer from './reducers/answerReducer';
+import userReducer from './reducers/userReducer';
 
 const sagaMiddleware = createSagaMiddleware()
 
 const reducers = combineReducers({
     question: questionsReducer,
-    answers: answerReducer
+    answers: answerReducer,
+    user: userReducer
 });
 
 const store = createStore(

@@ -11,6 +11,13 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    typography: {
+        padding: theme.spacing(2),
+        color: 'black',
+    },
+    link: {
+        textDecoration: 'none'
+    }
 }));
 
 export default useStyles;

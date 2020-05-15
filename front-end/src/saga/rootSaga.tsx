@@ -1,10 +1,12 @@
 import { all } from 'redux-saga/effects';
 import { watchAllQuestions } from './questions/questionsSaga';
-import { watchAllQuestionTypes } from './answer/answerSaga';
+import { watchAllAnswers } from './answer/answerSaga';
+import { watchAllUser } from './user/userSaga';
 
 export default function* rootSaga() {
     yield all([
         watchAllQuestions(),
-        watchAllQuestionTypes()
+        watchAllAnswers(),
+        watchAllUser()
     ]);
 }
