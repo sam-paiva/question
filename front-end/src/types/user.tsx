@@ -1,8 +1,10 @@
 export const LOGIN = 'LOGIN';
 export const LOGOUT = 'LOGOUT';
+export const GET_USER_DATA = 'GET_USER_DATA';
 
 export interface UserState {
-    token: string
+    token: string,
+    user: User
 }
 
 export interface LoginViewModel {
@@ -14,6 +16,9 @@ export interface User {
     id: number,
     username: string,
     email: string,
+    password: string,
+    created_at: Date | null,
+    updated_at: Date | null
 }
 
 export interface LoginAction {
@@ -26,4 +31,9 @@ export interface LogoutAction {
     payload: void
 }
 
-export type UserActions = LoginAction | LogoutAction;
+export interface GetUSerData {
+    type: typeof GET_USER_DATA,
+    payload: User
+}
+
+export type UserActions = LoginAction | LogoutAction | GetUSerData;

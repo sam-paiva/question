@@ -11,6 +11,9 @@ const useStyles = makeStyles((theme) => ({
     title: {
         flexGrow: 1,
     },
+    subtitle: {
+        textAlign: 'right'
+    },
     typography: {
         padding: theme.spacing(2),
         color: 'black',

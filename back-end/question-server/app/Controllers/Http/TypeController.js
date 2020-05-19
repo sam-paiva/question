@@ -20,6 +20,11 @@ class TypeController {
    * @param {View} ctx.view
    */
   async index({ request, response, view }) {
+    const types = Type.query().fetch();
+
+    console.log(types);
+
+    return types;
   }
 
   /**

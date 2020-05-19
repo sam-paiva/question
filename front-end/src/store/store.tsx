@@ -4,13 +4,15 @@ import rootSaga from '../saga/rootSaga';
 import questionsReducer from './reducers/questionsReducer';
 import answerReducer from './reducers/answerReducer';
 import userReducer from './reducers/userReducer';
+import questionTypesReducer from './reducers/questionTypesReducer';
 
 const sagaMiddleware = createSagaMiddleware()
 
 const reducers = combineReducers({
     question: questionsReducer,
     answers: answerReducer,
-    user: userReducer
+    user: userReducer,
+    questionTypes: questionTypesReducer
 });
 
 const store = createStore(

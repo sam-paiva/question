@@ -3,12 +3,12 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
-        marginTop: 30,
-        marginBottom: 30,
-        marginLeft: 300,
-        marginRight: 300,
-        minWidth: 275,
-        backgroundColor: '#192124',
+        // marginTop: 30,
+        // marginBottom: 30,
+        // marginLeft: 300,
+        // marginRight: 300,
+        // minWidth: 275,
+        backgroundColor: '#FFF',
     },
     bullet: {
         display: 'inline-block',
@@ -17,10 +17,10 @@ const useStyles = makeStyles({
     },
     title: {
         fontSize: 18,
-        color: '#FFF'
+        color: '#black'
     },
     text: {
-        color: '#FFF'
+        color: '#black'
     },
     pos: {
         marginBottom: 12,
