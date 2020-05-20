@@ -2,6 +2,8 @@ import { User } from "./user";
 import { QuestionType } from './questionType';
 
 export const GET_ALL_QUESTIONS = 'GET_ALL_QUESTIONS';
+export const CREATE_QUESTION = 'CREATE_QUESTION';
+export const IS_LOADING = 'IS_LOADING';
 
 export interface Question {
     id: number,
@@ -15,7 +17,8 @@ export interface Question {
 }
 
 export interface QuestionsState {
-    questions: Question[]
+    questions: Question[],
+    isLoading: boolean
 }
 
 export interface GetAllQuestionsAction {
@@ -23,4 +26,14 @@ export interface GetAllQuestionsAction {
     payload: Question[]
 }
 
-export type QuestionsActions = GetAllQuestionsAction;
+export interface CreateNewQuestion {
+    type: typeof CREATE_QUESTION,
+    payload: void
+}
+
+export interface IsLoadingAction {
+    type: typeof IS_LOADING,
+    payload: void
+}
+
+export type QuestionsActions = GetAllQuestionsAction | CreateNewQuestion | IsLoadingAction;

@@ -11,12 +11,14 @@ import TypesList from '../../components/typeQuestionsList';
 import { getAllQuestionTypes } from '../../store/actions/questionTypesActions';
 import { QuestionType } from '../../types/questionType';
 import MakeQuestion from '../../components/makeQuestion';
+import Loading from '../../components/loading';
 
 const Home = () => {
 
     const classes = styles();
     const questions = useSelector<RootState, Question[]>(state => state.question.questions);
     const questionTypes = useSelector<RootState, QuestionType[]>(state => state.questionTypes.questionTypes);
+    const loading = useSelector<RootState, boolean>(state => state.question.isLoading);
     const dispatch = useDispatch();
 
     useEffect(() => {
@@ -26,16 +28,19 @@ const Home = () => {
 
     return (
         <div className={classes.root} >
-            <Header />
+            <Grid>
+                <Header />
+                <Loading open={loading} />
+            </Grid>
             <Grid className={classes.gridQuestion} xs={12} container spacing={3}>
-                <Grid item xs={3} className={classes.gridTypesList}>
+                <Grid item xs={3} md={3} sm={12} className={classes.gridTypeList}>
                     <TypesList questionTypes={questionTypes} />
                 </Grid>
                 <Grid item xs={6}>
                     <Grid>
                         <MakeQuestion questionTypes={questionTypes} />
                     </Grid>
-                    <Grid className={classes.grid}>
+                    <Grid xs={12} className={classes.grid}>
                         <QuestionsList questions={questions} />
                     </Grid>
                 </Grid>

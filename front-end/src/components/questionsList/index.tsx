@@ -46,6 +46,7 @@ const QuestionsList: FC<Props> = (props: Props) => {
                     </CardContent>
                     <CardActions>
                         <Button onClick={() => dialogOpen(question.id)} className={classes.text} size="small">Ver Respostas</Button>
+                        <Button onClick={() => dialogOpen(question.id)} className={classes.text} size="small">Respostas</Button>
                     </CardActions>
                 </Card>
             })}

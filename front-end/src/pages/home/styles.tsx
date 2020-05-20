@@ -7,20 +7,22 @@ const styles = makeStyles({
         padding: 0,
     },
     gridQuestion: {
-        // justifyContent: 'center',
+        justifyContent: 'flex-start',
         // alignItems: 'center',
         // alignSelf: 'center',
-        marginTop: 10,
-        marginLeft: 12
+        marginTop: 70,
+
     },
     grid: {
-        marginTop: 30
+        marginTop: 30,
+    },
+    gridTypeList: {
+        marginTop: 30,
+        marginLeft: 12
     },
     questionList: {
         marginLeft: 30
     },
-    gridTypesList: {
-    }
 });
 
 export default styles;

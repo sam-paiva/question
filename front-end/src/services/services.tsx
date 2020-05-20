@@ -32,3 +32,7 @@ export async function getUserByEmail(email: string) {
         }
     });
 }
+
+export async function createQuestion(body: any) {
+    return await axios.post(URL_BASE + '/questions' || URL_HOMO + '/question', body);
+}

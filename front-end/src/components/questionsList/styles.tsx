@@ -3,7 +3,7 @@ import { makeStyles } from "@material-ui/core";
 
 const useStyles = makeStyles({
     root: {
-        // marginTop: 30,
+        marginTop: 30,
         // marginBottom: 30,
         // marginLeft: 300,
         // marginRight: 300,
@@ -16,10 +16,11 @@ const useStyles = makeStyles({
         transform: 'scale(0.8)',
     },
     title: {
-        fontSize: 18,
+        fontSize: 16,
         color: '#black'
     },
     text: {
+        fontSize: 14,
         color: '#black'
     },
     pos: {

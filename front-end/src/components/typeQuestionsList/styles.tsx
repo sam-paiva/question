@@ -7,6 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
             maxWidth: 300,
             backgroundColor: theme.palette.background.paper,
             boxShadow: '0px 1px #888888',
+            position: 'fixed'
 
         },
         nested: {
